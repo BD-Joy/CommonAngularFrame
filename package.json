@@ -1,7 +1,7 @@
 {
-    "name": "TipsA2",
+    "name": "CommonAngularFrame",
     "version": "1.0.0",
-    "description": "Tips with anuglar 2.",
+    "description": "Common Angular Frame",
     "scripts": {
         "postinstall": "typings install",
         "prestart": "webpack --progress --colors",
@@ -32,6 +32,7 @@
         "angular2-template-loader": "^0.5.0",
         "html-loader": "^0.4.4",
         "html-webpack-plugin": "^2.22.0",
-        "webpack": "^1.13.2"
+        "webpack": "^1.13.2",
+        "anywhere": "^1.4.0"
     }
 }
