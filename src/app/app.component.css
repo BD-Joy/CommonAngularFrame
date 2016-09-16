@@ -1,0 +1,10 @@
+.main{
+    display: flex;
+    width: 200px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
