@@ -24,8 +24,8 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                include: [
-                    path.resolve(__dirname, "src/assets/css"),
+                exclude: [
+                    path.resolve(__dirname, "src/app"),
                 ],
                 loader: extractTextPlugin.extract("style","css?sourceMap")
             },
