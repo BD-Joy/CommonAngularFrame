@@ -14,7 +14,7 @@ module.exports = {
         filename: "[name].js"
     },
     resolve: {
-        extensions: ['', '.js', '.ts', ".css"]
+        extensions: ["", ".js", ".ts"]
     },
     module: {
         loaders: [
@@ -24,16 +24,12 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                exclude: [
-                    path.resolve(__dirname, "src/app"),
-                ],
+                include: /src\\assets\\css/,
                 loader: extractTextPlugin.extract("style","css?sourceMap")
             },
             {
                 test: /\.css$/,
-                include: [
-                    path.resolve(__dirname, "src/app")
-                ],
+                include: /src\\app/,
                 loader: "raw"
             },
             {

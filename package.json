@@ -1,11 +1,10 @@
 {
     "name": "CommonAngularFrame",
     "version": "1.0.0",
-    "description": "Common Angular Frame",
+    "description": "Common Angular Frame.",
     "scripts": {
         "postinstall": "typings install",
-        "prestart": "webpack --progress --colors",
-        "start": "anywhere -d ./dist -h localhost -p 8000"
+        "start": "webpack-dev-server --inline"
     },
     "dependencies": {
         "@angular/common": "2.0.0",
@@ -33,6 +32,6 @@
         "html-loader": "^0.4.4",
         "html-webpack-plugin": "^2.22.0",
         "webpack": "^1.13.2",
-        "anywhere": "^1.4.0"
+        "webpack-dev-server": "^1.16.1"
     }
 }

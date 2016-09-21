@@ -6,3 +6,10 @@
 1. 一些基础配置（如：webpack配置仅针对dev环境）。  
 2. 一个良好的文件结构。  
 3. 一些示例代码。  
+
+Note:
+在package.json中，你也可使用anywhere: 
+```
+"prestart": "webpack --progress --colors"
+"start": "anywhere -d ./dist -h localhost -p 8000"  
+``` 
