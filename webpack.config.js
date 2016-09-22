@@ -23,9 +23,17 @@ module.exports = {
                 loaders: ["ts", "angular2-template"]
             },
             {
+                test: /\.(png|jpe?g|gif|ico)$/,
+                loader: 'file?name=assets/img/[path][name].[ext]'
+            },
+            {
+                test: /\.(svg|woff|woff2|ttf|eot)$/,
+                loader: 'file?name=assets/font/[name].[ext]'
+            },
+            {
                 test: /\.css$/,
-                include: /src\\assets\\css/,
-                loader: extractTextPlugin.extract("style","css?sourceMap")
+                include: [/src\\assets\\css/, /node_module/],
+                loader: extractTextPlugin.extract("style", "css?sourceMap")
             },
             {
                 test: /\.css$/,
@@ -45,6 +53,11 @@ module.exports = {
         new extractTextPlugin("assets/css/[name].css"),
         new htmlWebpackPlugin({
             template: "./src/index.html"
+        }),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            jquery: "jquery"
         })
     ]
 }
