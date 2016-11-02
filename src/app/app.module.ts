@@ -9,9 +9,11 @@ import '../assets/css/public.css'
     imports: [
         BrowserModule
     ],
+    exports: [],
     declarations: [
         AppComponent
     ],
+    providers: [],
     bootstrap:[
         AppComponent
     ]
